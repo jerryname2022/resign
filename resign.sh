@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
-unzip -o your.apk -d path
-cd path
-rm -r -f META-INF/
-zip -r product.apk *
-mv product.apk ..
+location=/home/xiaoming/Desktop/resign/tools
+project=${location}/HelloWorld
+
+keystore=${location}/secd.jks
+alias=secd
+storepass=123456
+keypass=123456
+
+cd ${project}
+rm -r -f ${project}/META-INF/
+zip -r ${project}/product.apk *
+mv ${project}/product.apk ..
 cd ..
-rm -f -r path
-jarsigner -keystore apk.keystory -storepass pwd -keypass pwd product.apk  keyAlias
-zipalign 4 product.apk out-apk-resigner.apk
+jarsigner -keystore ${keystore} -storepass ${storepass} -keypass ${keypass} ${location}/product.apk  ${alias} 
+/home/xiaoming/Android/Sdk/build-tools/26.0.2/zipalign 4 ${location}/product.apk ${location}/out-apk-resigner.apk
