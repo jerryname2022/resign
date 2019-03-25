@@ -2,10 +2,10 @@
 location=/home/xiaoming/Desktop/resign/tools
 project=${location}/HelloWorld
 
-keystore=${location}/secd.jks
-alias=secd
-storepass=123456
-keypass=123456
+keystore=${location}/test.jks
+alias=test
+storepass=125456
+keypass=125489
 
 cd ${project}
 rm -r -f ${project}/META-INF/

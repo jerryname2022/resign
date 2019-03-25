@@ -1,0 +1,51 @@
+
+1.
+	unzip -o ${location}/weixin_1400.apk -d path
+2.
+	change dex file
+3.	
+	rm -r -f ${project}/META-INF/
+	zip -r ${project}/product.apk *
+4.
+	jarsigner -keystore ${keystore} -storepass ${storepass} -keypass ${keypass} ${location}/product.apk  ${alias} 
+
+
+
+************************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
