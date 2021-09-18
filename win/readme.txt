@@ -1,5 +1,7 @@
 
 
+https://www.jianshu.com/p/5d78507d24db
+
 1.解压apk到apk.out
 apktool.bat d -o apk.out source.apk
 
